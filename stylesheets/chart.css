@@ -1,0 +1,48 @@
+.chart{
+	width : 100%;
+}
+.chart .title{
+	margin-top : 1.5em;
+	text-align: center;	
+}
+.chart .title .main{
+	font-size:1.5em;
+	color:#0289e7; 
+}
+.chart .title .sub{
+	
+}
+.chart .content{
+	max-width : 100%;
+	min-height : 15em;
+	height:100%;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+}
+.chart .content canvas{
+	width:100%;
+	height:100%;
+}
+.loading{
+	margin : 0px;
+	position: absolute;
+	top:0px;
+	z-index : 999;
+	width : 100%;
+	height :100%;
+	text-align : center;	
+}
+.loading div{
+	height:50%;
+}
+.loading_tip{
+   color : #fff;
+   background-color: rgba(0,0,0,0.7);
+   border-radius : 3px;
+   border: solid 1px rgba(0,0,0,0.8);
+   padding : 1em;
+   
+   line-height:2em;
+   font-family: '\5fae\8f6f\96c5\9ed1';
+   font-size : 1em;
+}
