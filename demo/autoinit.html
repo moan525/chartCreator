@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chartCreator demo-autoinit 自动生成</title>
+	<meta name="referrer" content="always" />
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <link type="text/css" rel="stylesheet" href="../css/chart.css"/>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script type="text/javascript" src="../src/MLine.js"></script>
+    <script type="text/javascript" src="../src/chartCreator.js"></script>
+
+
+</head>
+<body>
+  <div class="chart line"><!--声明图表并设置图表类型 line-->
+     <div class="title">
+      <div class="main"></div><br/><!--maintitle 主标题 若不需要，可去除此元素-->
+      <div class="sub"></div><br/><!--subtitle 副标题 若不需要，可去除此元素-->
+     </div>
+     <div class="content"><!--图表渲染位置-->
+       <canvas></canvas>
+     </div>
+   </div>
+
+   <div class="chart bar">
+     <div class="title">
+      <!-- <div class="main"></div><br/> -->
+      <div class="sub"></div><br/>
+     </div>
+     <div class="content">
+       <canvas></canvas>
+     </div>
+    </div>
+</body>
+<script type="text/javascript">
+	function main(main_title,sub_title,json,x_label,y_label){
+		//自动生成图表
+		//自动找寻class="chart line" 或 class="chart bar" 元素进行渲染
+		chartCreator.autoInit(main_title,sub_title,json,x_label,y_label);
+	}
+	var main_title = 'main title';
+	var sub_title = 'sub title';
+	var json = '['
+	           +'{"x_label":"label1","y_label":"1"},'
+	           +'{"x_label":"label2","y_label":"2"},'
+	           +'{"x_label":"label3","y_label":"3"}'
+	           +']';
+	var x_label = 'x_label';
+	var y_label = 'y_label';
+	main(main_title,sub_title,json,x_label,y_label);
+</script>
+</html>
