@@ -15,3 +15,5 @@ Chart.js version: 1.0.2
 ####已封装图表
 - 折线图 line
 - 柱状图 bar 
+
+在线范例：[http://moan525.github.io/chartCreator/](http://moan525.github.io/chartCreator/)
